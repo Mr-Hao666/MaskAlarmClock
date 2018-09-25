@@ -126,7 +126,7 @@ public class FaceScoreService {
             if (Colls.notEmpty(faceScoreList)) {
                 if (style == FaceScoreStyle.WATER.getValue()) {
                     if (faceScoreList.size() >= 2) {
-                        throw new BusinessException(ResultStatus.HAD_WATER.getCode(),i18nUtil.getMessage(ResultStatus.HAD_COMPACT.getMessage()));
+                        throw new BusinessException(ResultStatus.HAD_WATER.getCode(),i18nUtil.getMessage(ResultStatus.HAD_WATER.getMessage()));
                     }
                 } else if (style == FaceScoreStyle.COMPACT.getValue()) {
                     if (faceScoreList.size() >= 1) {
@@ -134,15 +134,15 @@ public class FaceScoreService {
                     }
                 } else if (style == FaceScoreStyle.ALARM.getValue()) {
                     if (faceScoreList.size() >= 3) {
-                        throw new BusinessException(ResultStatus.HAD_ALARM.getCode(),i18nUtil.getMessage(ResultStatus.HAD_COMPACT.getMessage()));
+                        throw new BusinessException(ResultStatus.HAD_ALARM.getCode(),i18nUtil.getMessage(ResultStatus.HAD_ALARM.getMessage()));
                     }
                 }else if(style == FaceScoreStyle.WHITE.getValue()){
                     if (faceScoreList.size() >= 2) {
-                        throw new BusinessException(ResultStatus.HAD_WHITE.getCode(),i18nUtil.getMessage(ResultStatus.HAD_COMPACT.getMessage()));
+                        throw new BusinessException(ResultStatus.HAD_WHITE.getCode(),i18nUtil.getMessage(ResultStatus.HAD_WHITE.getMessage()));
                     }
                 }else if (style == FaceScoreStyle.MOIST.getValue()) {
                     if (faceScoreList.size() >= 1) {
-                        throw new BusinessException(ResultStatus.HAD_MOIST.getCode(),i18nUtil.getMessage(ResultStatus.HAD_COMPACT.getMessage()));
+                        throw new BusinessException(ResultStatus.HAD_MOIST.getCode(),i18nUtil.getMessage(ResultStatus.HAD_MOIST.getMessage()));
                     }
                 }
             }
